@@ -1,5 +1,3 @@
-
-
 Pod::Spec.new do |s|
   s.name             = 'DouyinOpenSDK'
   s.version          = '4.1.17'
@@ -12,26 +10,22 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '9.0'
 
-
-  s.vendored_frameworks = "DouyinOpenSDK.framework"
-  s.frameworks           = [
-    "UIKit",
-    "Foundation",
-    "CoreGraphics",
-    "WebKit",
-    "Security",
-    "Photos"
+  s.vendored_frameworks = 'DouyinOpenSDK.framework'
+  s.frameworks          = [
+    'UIKit',
+    'Foundation',
+    'CoreGraphics',
+    'WebKit',
+    'Security',
+    'Photos'
   ]
 
-
-
   s.source_files = 'DouyinOpenSDK.framework/Headers/*.h'
- s.pod_target_xcconfig = {
-  'OTHER_LDFLAGS' => '-ObjC -all_load',
-  'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
-}
-
-s.user_target_xcconfig = {
-  'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
-}
-
+  s.pod_target_xcconfig = {
+    'OTHER_LDFLAGS' => '-ObjC -all_load',
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+  }
+  s.user_target_xcconfig = {
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+  }
+end
